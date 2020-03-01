@@ -12,7 +12,7 @@
 	background-color: rgba(64, 64, 64, 0.5);
 }
 
-.calculator input {
+#stockNumberInput {
 	width: 60%;
 
 	margin: 4px;
@@ -29,7 +29,7 @@
 	background-color: #707070;
 }
 
-.calculator input::placeholder {
+#stockNumberInput::placeholder {
 	color: #dedede;
 	opacity: 0.5;
 }
