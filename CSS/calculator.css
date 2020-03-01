@@ -33,3 +33,18 @@
 	color: #dedede;
 	opacity: 0.5;
 }
+
+#incorrectInputMsg {
+	display: inline-block;
+	opacity: 0;
+
+	height: 20px;
+
+	margin: 0px;
+	margin-top: 10px;
+
+	font-size: 20px;
+	color: #dd2222;
+
+	transition: 0.5s;
+}
