@@ -1,8 +1,10 @@
 body {
+	height: 100vh;
 	margin: 0px;
 
 	background-image: url("../Images/index\ bg.png");
 	background-size: cover;
+	background-position: center;
 	background-color: #a3a3a3;
 	background-repeat: no-repeat;
 }
