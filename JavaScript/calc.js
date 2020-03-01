@@ -11,3 +11,15 @@ function validateInput() {
 		errorMessage.removeAttribute("style");
 	}
 }
+
+function controlDigit(stockNumber) {
+	let out = 0;
+	let curr;
+
+	for (let i = 0; i < stockNumber.length; i++){
+		curr = Number(stockNumber[i]) * ((i % 2 == 0) ? 2 : 1);
+		out += Math.floor(curr / 10) + curr % 10;
+	}
+
+	return (Math.floor(out / 10) + 1) * 10 - out;
+}
