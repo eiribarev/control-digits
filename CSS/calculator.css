@@ -54,26 +54,29 @@
 }
 
 #fullNumber {
+	--fullNumberWidth: 384px;
+
 	display: none;
 
 	height: 72px;
-	width: 388px;
+	width: var(--fullNumberWidth);
 
-	margin-left: calc(50% - 194px);
-	margin-right: calc(50% - 194px);
+	margin-left: calc(50% - var(--fullNumberWidth) / 2);
+	margin-right: calc(50% - var(--fullNumberWidth) / 2);
 
 	opacity: 0;
 
-	transition: 1s;
+	transition: 0.5s;
 }
 
-#stockType, #countryCode, #stockClass, #stockNumber, #controlDigit {
+#stockType, #countryCode, #leadingZeroes, #stockClass, #stockNumber, #controlDigitSeparator, #controlDigit {
 	display: inline-block;
 
 	margin: 0px;
+	margin-left: -4px;
 }
 
-#stockType, #countryCode, #controlDigit {
+#stockType, #countryCode, #leadingZeroes, #controlDigitSeparator, #controlDigit {
 	height: 48px;
 
 	margin-top: 24px;
@@ -85,4 +88,16 @@
 	height: 72px;
 
 	font-size: 72px;
+}
+
+#leadingZeroes, #stockClass {
+	margin-right: 10px;
+}
+
+#stockType {
+	margin-left: 0px;
+}
+
+#controlDigitSeparator {
+	margin-left: -8px;
 }
