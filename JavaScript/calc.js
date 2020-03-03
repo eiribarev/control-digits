@@ -6,10 +6,26 @@ function validateInput() {
 
 	if (inputText.search(/[^0-9]/) != -1 || (inputText.length != 5 && inputText.length != 9 && inputText.length != 11)){
 		errorMessage.style = "opacity: 1";
+
+		document.getElementById("fullNumber").style.removeProperty("opacity");
+
+		setTimeout(function() {document.getElementById("calculator").style.removeProperty("height");}, 700);
 	}
 	else {
 		errorMessage.removeAttribute("style");
+
+		document.getElementById("calculator").style.height = "120px";
+
+		document.getElementById("fullNumber").style.display = "inline-block";
+
+		setTimeout(function() {handleNumber(inputText);}, 700);
 	}
+}
+
+function handleNumber(stockNumber) {
+	let control = String(controlDigit(stockNumber));
+
+	document.getElementById("fullNumber").style.opacity = "1";
 }
 
 function controlDigit(stockNumber) {
