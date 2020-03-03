@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="../CSS/calculator.css">
 		<link rel="icon" href="../Images/icon.png">
 
+		<script src="../JavaScript/calc.js"></script>
+
 		<title>BDZ Stock Numbers</title>
 	</head>
 
@@ -16,8 +18,19 @@
 			<a href="about.html">About</a>
 		</nav>
 
-		<div class="calculator">
-			<input type="text">
+		<div id="calculator">
+			<input id="stockNumberInput" type="text" onchange="validateInput();" placeholder="Enter stock number here">
+			<p id="incorrectInputMsg">*Incorrect input</p> <br>
+
+			<span id="fullNumber">
+				<p id="stockType">00</p>
+				<p id="countryCode">00</p>
+				<p id="leadingZeroes">00</p>
+				<p id="stockClass">00</p>
+				<p id="stockNumber">000</p>
+				<p id="controlDigitSeparator">-</p>
+				<p id="controlDigit">0</p>
+			</span>
 		</div>
 	</body>
 </html>
