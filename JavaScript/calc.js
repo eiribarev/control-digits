@@ -81,5 +81,5 @@ function controlDigit(stockNumber) {
 		out += Math.floor(curr / 10) + curr % 10;
 	}
 
-	return (Math.floor(out / 10) + 1) * 10 - out;
+	return ((Math.floor(out / 10) + 1) * 10 - out) % 10;
 }
