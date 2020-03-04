@@ -62,6 +62,7 @@ function updateNumber(stockNumber) {
 
 			document.getElementById("stockType").innerHTML = stockNumber.substr(0, 2);
 			document.getElementById("countryCode").innerHTML = stockNumber.substr(2, 2);
+			document.getElementById("leadingZeroes").innerHTML = stockNumber.substr(4, 2);
 			document.getElementById("stockClass").innerHTML = stockNumber.substr(6, 2);
 			document.getElementById("stockNumber").innerHTML = stockNumber.substr(8, 3);
 			document.getElementById("controlDigitSeparator").innerHTML = "-";
